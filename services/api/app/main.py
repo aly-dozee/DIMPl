@@ -8,3 +8,7 @@ app = FastAPI(title="Dozee Data & Infrastructure Management Platform (DIMPl) API
 
 app.include_router(experiments.router, prefix="/experiments", tags=["experiments"])
 app.include_router(workflows.router, prefix="/workflows", tags=["workflows"])
+
+@app.get("/")
+def root():
+    return {"msg": "Hello, World!"}
