@@ -1,19 +1,13 @@
 [project]
 name = "dimpl"
 version = "0.1.0"
-requires-python = ">=3.12"
-authors = [{name = "Aly Kapasi"}]
-
+requires-python = ">=3.13"
 dependencies = [
-    "fastapi>=0.118.0",
-    "uvicorn[standard]>=0.37.0",
-    "mlflow>=3.4.0",
-    "flytekit>=1.16.5",
-    "boto3>=1.40.18",
-    "psycopg2-binary>=2.9.10",
-    "pydantic>=2.11.9",
-    "httpx>=0.28.1",
+    "doz-file-utils",
+    "minio>=7.2.20",
+    "numpy>=2.3.5",
+    "pandas>=2.3.3",
 ]
 
-[project.scripts]
-start-api = "uvicorn services.api.app.main:app --reload"
+[tool.uv.sources]
+doz-file-utils = { git = "ssh://git@bitbucket.org/turtleshelltechnologies/doz-file-utils.git" }
