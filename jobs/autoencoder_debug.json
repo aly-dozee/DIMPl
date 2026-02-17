@@ -1,0 +1,9 @@
+{
+    "job_id": "ae_debug_001",
+    "model": "autoencoder_v0",
+    "entrypoint": "ml_jobs.models.autoencoder_v0.train:main",
+    "params": {
+        "latent_dim": 64,
+        "epochs": 3
+    }
+}
